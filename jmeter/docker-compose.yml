@@ -1,0 +1,9 @@
+version: '3'
+services:
+  jmeter:
+    image: a6kme/jmeter:5.1.1
+    volumes:
+      - ${PWD}:${PWD}
+    working_dir: ${PWD}
+    environment:
+      - DISPLAY
