@@ -8,7 +8,7 @@ For any container that uses display forwarding, you will need to have XQuartz up
 
 - `brew install socat`
 - `socat TCP-LISTEN:6000,reuseaddr,fork UNIX-CLIENT:\"$DISPLAY\"`
-- Instlal XQuartz from [https://www.xquartz.org/](https://www.xquartz.org/)
+- Install XQuartz from [https://www.xquartz.org/](https://www.xquartz.org/)
 - `open -a Xquartz`
 - Check the box of `Allow connections from network clients` by going to `Xquartz Preferences -> Security`
 - Export Display as environment variable, so that it gets passed along in the containers `DISPLAY=$(ipconfig getifaddr en0):0`
