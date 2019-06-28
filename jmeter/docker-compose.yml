@@ -1,7 +1,7 @@
 version: '3'
 services:
   jmeter:
-    image: a6kme/jmeter:5.1.1
+    image: a6kme/jmeter
     volumes:
       - ${PWD}:${PWD}
     working_dir: ${PWD}
