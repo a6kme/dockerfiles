@@ -10,4 +10,4 @@ Please make sure you are forwarding the `Display` environment variable as mentio
 
 ### Using docker run
 
-`docker run --name jmeter -v ${PWD}:${PWD} -w ${PWD} -e DISPLAY=$(ipconfig getifaddr en0):0 a6kme/jmeter:5.1.1`
+`docker run --name jmeter -v ${PWD}:${PWD} -w ${PWD} -e DISPLAY=$(ipconfig getifaddr en0):0 a6kme/jmeter`
