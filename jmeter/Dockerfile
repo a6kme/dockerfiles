@@ -20,8 +20,13 @@ RUN mkdir -p /tmp/dependencies \
     && rm -rf /tmp/dependencies \ 
     && apt-get -y remove wget
 
+# Copy entrypoint.sh
+COPY entrypoint.sh $JMETER_BIN
+
+RUN chmod +x $JMETER_BIN/entrypoint.sh
+
 ENV PATH $PATH:$JMETER_BIN
 
 WORKDIR	${JMETER_HOME}
 
-ENTRYPOINT ["jmeter"]
+ENTRYPOINT ["entrypoint.sh"]
